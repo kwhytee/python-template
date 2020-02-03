@@ -1,7 +1,7 @@
 """Progam to run module1.Logic1 example
 """
 # Example of flake8 violation
-# import os
+import os
 
 # 3rd party libs
 from pyspark.sql import SparkSession
@@ -28,8 +28,8 @@ def debug():
     logic1.get_zero_vol().show()
 
     # Example of bandit violation
-    # my_secret = "password"
-    # print(my_secret)
+    my_secret = "password"
+    print(my_secret)
 
 
 if __name__ == "__main__":
