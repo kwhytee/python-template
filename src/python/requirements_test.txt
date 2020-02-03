@@ -1,0 +1,3 @@
+# Dependencies required by your test code
+spark-testing-base==0.10.0
+unittest2==1.1.0
