@@ -8,7 +8,7 @@ pushd "$(dirname "$(readlink -f "$BASH_SOURCE")")" > /dev/null && {
     SCRIPT_DIR="$PWD"
     popd > /dev/null
 }
-echo $SCRIPT_DIR
+echo "$SCRIPT_DIR"
 cd "$SCRIPT_DIR"
 
 rm -fr build
