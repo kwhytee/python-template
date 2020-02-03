@@ -34,7 +34,7 @@ jobs:
             . venv/bin/activate
             pip install -r src/python/requirements.txt
             pip install -r src/python/requirements_test.txt
-            pip install -r src/python/requirements_dev.txt
+            pip install -r src/python/requirements_dev_tools.txt
             pip install codacy-coverage
 
       - save_cache:
