@@ -29,6 +29,7 @@ def debug():
 
     # Example of bandit violation
     my_secret = "password"
+    print(my_secret)
 
 
 if __name__ == "__main__":
