@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.7.5
+      - image: python:3.6.8
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -50,7 +50,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            suod apt-get install -y --no-install-recommends openjdk-8-jre
+            sudo apt-get install -y --no-install-recommends openjdk-8-jre
             . venv/bin/activate
             coverage run --source=src/python/example_pkg -m unittest2 src/python/tests/*.py
 
