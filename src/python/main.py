@@ -28,7 +28,7 @@ def debug():
     logic1.get_zero_vol().show()
 
     # Example of bandit violation
-    # my_secret = "password"
+    my_secret = "password"
 
 
 if __name__ == "__main__":
