@@ -50,8 +50,8 @@ jobs:
       - run:
           name: run tests
           command: |
+            apt-get install -y --no-install-recommends openjdk-8-jre
             . venv/bin/activate
-            apt-get update && apt-get install -y --no-install-recommends openjdk-8-jre
             coverage run --source=src/python/example_pkg -m unittest2 src/python/tests/*.py
 
       - store_artifacts:
