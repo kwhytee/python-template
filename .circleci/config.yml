@@ -52,6 +52,8 @@ jobs:
           command: |
             . venv/bin/activate
             coverage run --source=src/python/example_pkg -m unittest2 src/python/tests/*.py
+            coverage xml
+            python-codacy-coverage -r coverage.xml
 
       - store_artifacts:
           path: test-reports
