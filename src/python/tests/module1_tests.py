@@ -27,18 +27,18 @@ class Logic1Test(SQLTestCase):
         with self.assertRaises(DataFrameMissingColumnError):
             Logic1(input_dataframe)
 
-    # def test2_get_zero_vol(self):
-    #     """Test get_zero_vol correctly returns dataframe containing rows with only zero volume
-    #     """
-    #     logic1 = Logic1(self.valid_input_dataframe())
-    #     actual = logic1.get_zero_vol()
-    #     expected = self.sqlCtx.createDataFrame([(1, 3)], ["key_a", "key_b"])
-    #     self.assertDataFrameEqual(expected, actual)
+    def test2_get_zero_vol(self):
+        """Test get_zero_vol correctly returns dataframe containing rows with only zero volume
+        """
+        logic1 = Logic1(self.valid_input_dataframe())
+        actual = logic1.get_zero_vol()
+        expected = self.sqlCtx.createDataFrame([(1, 3)], ["key_a", "key_b"])
+        self.assertDataFrameEqual(expected, actual)
 
-    # def test3_get_non_zero_vol(self):
-    #     """Test get_non_zero_vol correctly returns dataframe containing rows with only non zero volume
-    #     """
-    #     logic1 = Logic1(self.valid_input_dataframe())
-    #     actual = logic1.get_non_zero_vol()
-    #     expected = self.sqlCtx.createDataFrame([(1, 1), (1, 2)], ["key_a", "key_b"])
-    #     self.assertDataFrameEqual(expected, actual)
+    def test3_get_non_zero_vol(self):
+        """Test get_non_zero_vol correctly returns dataframe containing rows with only non zero volume
+        """
+        logic1 = Logic1(self.valid_input_dataframe())
+        actual = logic1.get_non_zero_vol()
+        expected = self.sqlCtx.createDataFrame([(1, 1), (1, 2)], ["key_a", "key_b"])
+        self.assertDataFrameEqual(expected, actual)
