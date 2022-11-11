@@ -1,6 +1,6 @@
 # Dependencies required by your main code
 py4j==0.10.7
-pyspark==2.4.4
+pyspark==3.2.2
 quinn==0.4.0
 # Insecure package to demonstrate safety
 # insecure-package==0.1.0
